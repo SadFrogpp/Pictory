@@ -10,7 +10,7 @@ import android.widget.Toast
 import com.example.rxpictory.R
 import com.example.rxpictory.ui.main.feed.FeedFragment
 import com.example.rxpictory.ui.main.post.PostFragment
-import com.example.rxpictory.ui.mypage.MypageFragment
+import com.gram.pictory.ui.mypage.MypageFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

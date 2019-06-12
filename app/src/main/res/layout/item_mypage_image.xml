@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="model" type="com.example.rxpictory.model.Posts"/>
+        <variable name="vm" type="com.example.rxpictory.ui.mypage.MyPageViewModel"/>
+        <variable name="index" type="Integer"/>
+
+    </data>
+    <ImageView
+            android:onClick="@{() -> vm.goContent(index)}"
+            android:id="@+id/photo"
+            android:layout_width="137dp"
+            android:layout_height="137dp"
+            android:scaleType="centerCrop"
+            app:mypostThumbnail="@{model.imagePath}"
+            android:adjustViewBounds="true"
+            android:src="#000000"/>
+</layout>

@@ -34,12 +34,11 @@ class PostFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_post, container, false)
-
     }
 
     @SuppressLint("GridView")
     private fun getAllImages(activity: Activity) {
-        val uri: Uri = android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        val uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
         var cursor: Cursor?
         val columnIndexData: Int
         val albumList = ArrayList<String>()
