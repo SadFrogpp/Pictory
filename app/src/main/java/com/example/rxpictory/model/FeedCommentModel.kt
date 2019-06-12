@@ -13,5 +13,5 @@ data class FeedCommentModel(
     var author: String,
     @SerializedName("date")
     @Expose
-    var date: Int
+    var date: String
 )

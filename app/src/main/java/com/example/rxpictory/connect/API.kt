@@ -77,7 +77,7 @@ interface API {
     fun postReply(
         @Header("x-access-token") token: String,
         @Path("post_id") post_id: String,
-        @Body body: RequestBody): Single<Unit>
+        @Field ("comments") comments: RequestBody): Single<Unit>
 
     //프로필 수정
     //완료
@@ -85,7 +85,7 @@ interface API {
     @PUT("Mypage/update_info/")
     fun profileEdit(
         @Header("x-access-token") token: String,
-        @Part("username") username: RequestBody,
+        @Path("username") username: RequestBody,
         @Part("birth") birth: RequestBody
     ): Call<Unit>
 
@@ -102,5 +102,4 @@ interface API {
         @Header("x-access-token") token: String,
         @Path("post_id") post_id: String
     ): Single<ContentModel>
-
 }

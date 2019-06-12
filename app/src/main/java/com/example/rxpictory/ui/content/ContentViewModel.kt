@@ -36,12 +36,12 @@ class ContentViewModel(val app: Application): AndroidViewModel(app) {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe( {
-                _id.value = it.posts.postId
-                username.value = it.posts.username
-                imageName.value = it.posts.imageName
-                text.value = it.posts.text
-                id.value = it.posts.id
-                imagePath.value = it.posts.imagePath
+                _id.value = it.post.postId
+                username.value = it.post.username
+                imageName.value = it.post.imageName
+                text.value = it.post.text
+                id.value = it.post.id
+                imagePath.value = it.post.imagePath
                 profilePath.value = it.profilePath
                 //replyPoint.value = it.comments.size.toString()
                 //items.value = it
@@ -55,9 +55,9 @@ class ContentViewModel(val app: Application): AndroidViewModel(app) {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe( {
-
+                Log.d("vmcontent", replyText.value)
             }, {
-
+                Log.d("vmcontent", it.message)
             })
     }
 

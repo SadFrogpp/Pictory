@@ -1,5 +1,5 @@
 package com.example.rxpictory.model
 data class ContentModel(
-    var posts: Posts,
+    var post: Posts,
     var profilePath: String
 )

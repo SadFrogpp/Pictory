@@ -6,7 +6,7 @@ data class Posts(
     var liker: List<String>,
     var imageName: String,
     var imagePath: String,
-    var comments: List<String>,
+    var comments: List<CommentModel>,
     @SerializedName("_id")
     var postId: String,
     var text: String,
