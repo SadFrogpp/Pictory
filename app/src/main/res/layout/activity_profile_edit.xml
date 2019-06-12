@@ -1,0 +1,148 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="18"
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
+
+        <View android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="12"
+                android:orientation="horizontal" >
+
+            <View android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"/>
+
+
+            <ImageView
+                android:id="@+id/profileEditImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_plus" />
+
+
+            <View android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"/>
+
+
+        <View android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="46">
+        <View android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"/>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="10">
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"/>
+
+            <EditText
+                    android:layout_weight="2"
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:hint="이름"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"/>
+
+            <EditText
+                    android:layout_weight="2"
+                    android:id="@+id/idSignUpEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:hint="아이디"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"/>
+
+            <EditText
+                    android:layout_weight="2"
+                    android:id="@+id/pwSignUpEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:hint="비밀번호"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"/>
+
+            <EditText
+                    android:layout_weight="2"
+                    android:id="@+id/birthEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:hint="생년월일(ex. 20001010)"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"/>
+
+
+            <Button android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/blue_btn"
+                    android:text="수정"
+                    android:textColor="#FFFFFF"
+                    android:elevation="4dp"
+                    android:id="@+id/profileEditBtn"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <View android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

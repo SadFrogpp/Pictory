@@ -1,0 +1,199 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+                name="vm"
+                type="com.example.rxpictory.ui.signup.SignUpViewModel"/>
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="18"
+                android:background="@color/colorAccent"
+                android:orientation="vertical">
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12"
+                    android:orientation="horizontal" >
+
+                <View android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"/>
+
+
+                <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/linearLayout2">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/profileImage"
+                            android:src="@drawable/ic_plus"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:background="@drawable/profile_photo_circular"
+                            android:onClick="@{() ->vm.addProfileImage()}"/>
+
+                </LinearLayout>
+
+
+                <View android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.5"
+                    android:orientation="horizontal">
+
+                <View android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="프로필 사진을 추가해주세요"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"/>
+
+                <View android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="0.5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="46">
+            <View android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"/>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="10">
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"/>
+
+                <EditText
+                        android:layout_weight="2"
+                        android:id="@+id/nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:hint="이름"
+                        android:text="@={vm.registerName}"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"/>
+
+                <EditText
+                        android:layout_weight="2"
+                        android:id="@+id/idSignUpEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:hint="아이디"
+                        android:text="@={vm.registerId}"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"/>
+
+                <EditText
+                        android:layout_weight="2"
+                        android:id="@+id/pwSignUpEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:inputType="textPassword"
+                        android:hint="비밀번호"
+                        android:text="@={vm.registerPw}"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"/>
+
+                <EditText
+                        android:layout_weight="2"
+                        android:id="@+id/birthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:hint="생년월일(ex. 20001010)"
+                        android:text="@={vm.registerBirth}"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"/>
+
+
+                <Button android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@drawable/color_btn"
+                        android:text="회원가입"
+                        android:textColor="#FFFFFF"
+                        android:elevation="4dp"
+                        android:id="@+id/signUpBtn"
+                        android:onClick="@{(v) -> vm.doSignUp(v)}"
+                        />
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

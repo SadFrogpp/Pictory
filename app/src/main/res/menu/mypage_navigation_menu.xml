@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mypost"
+        android:title="내 게시물"
+        android:icon="@drawable/ic_table"/>
+
+    <item
+        android:id="@+id/like"
+        android:title="좋아요"
+        android:icon="@drawable/ic_like"/>
+
+</menu>
